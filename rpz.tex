@@ -1,0 +1,66 @@
+\documentclass[utf8x, times, 14pt]{styles/G7-32}
+
+% --- Команда для сборки документа ---
+
+
+% --- Подключение пакетов, функций, макросов
+\include{preamble/preamble.inc}
+\include{preamble/defenitions.inc}
+\include{preamble/macros.inc}
+
+% --- За стилевой файл ГОСТовской рамки 
+% --- огромнейшая благодарность Никите Мамаю!
+% --- Ссылка на его GitHub: https://github.com/nikitamamay
+
+% --- Настройка рамки ---
+\usepackage{styles/NMeskd}
+\renewcommand{\ESKDpervprimen}{}
+\renewcommand{\ESKDoboznachenie}{АБВГ.12345.67.890 ПЗ}
+\renewcommand{\ESKDnaimenovanie}{
+	\fontsize{7mm}{7mm}\selectfont \topicName
+}
+\renewcommand{\ESKDcompaniya}{
+	УрФУ \\ Кафедра ПТМиР \\ Группа НМТМ-143302
+}
+\renewcommand{\ESKDrazrabotal}{\authorLastName}
+\renewcommand{\ESKDproveril}{\teacherName}
+\renewcommand{\ESKDnormokontroler}{\teacherName}
+\renewcommand{\ESKDutverdil}{}
+\renewcommand{\ESKDlitera}{И}
+% \renewcommand{\ESKDfont}{\itshape}
+
+\begin{document}
+
+\include{title}
+
+% \setcounter{page}{2}
+
+\frontmatter
+
+% --- Включение рамки; 
+% В последнем параметре указать номер страницы,
+% с которой пойдёт рамка без основной надписи
+\renewcommand{\eskdRestPagesSincePage}{3}%
+\ramkaESKDauto
+
+\include{chapters/ref}
+
+\tableofcontents
+
+\include{chapters/intro}
+
+\mainmatter
+
+\include{chapters/ch_1}
+
+\backmatter
+
+\include{chapters/outro}
+
+\include{chapters/lib}
+
+\appendix
+
+\include{chapters/app_1}
+
+\end{document}

@@ -1,0 +1,260 @@
+\RequirePackage{lastpage}  % для получения общего количества листов в документе
+\RequirePackage{geometry}
+
+\newcommand{\ESKDfont}{}
+\newcommand{\ESKDpervprimen}{}
+\newcommand{\ESKDoboznachenie}{}
+\newcommand{\ESKDnaimenovanie}{}
+\newcommand{\ESKDcompaniya}{}
+\newcommand{\ESKDrazrabotal}{}
+\newcommand{\ESKDproveril}{}
+\newcommand{\ESKDnormokontroler}{}
+\newcommand{\ESKDutverdil}{}
+\newcommand{\ESKDlitera}{}
+\newcommand{\ESKDliteraa}{}
+\newcommand{\ESKDliteraaa}{}
+
+
+\newcommand{\ESKDrmbox}[2]{\raisebox{#1}{\makebox[0mm][l]{#2}}}
+\newcommand{\ESKDcbox}[2]{\hbox to #1{\hfill#2\hfill}}
+
+
+\newcommand{\ramkaESKDtitle}{%
+	\newgeometry{left=25mm, right=10mm, top=10mm, bottom=10mm, includehead, headheight=0mm, headsep=0mm, includefoot, footskip=0mm}%
+	\pagestyle{myheadings}%
+	\renewcommand{\@oddhead}{}%
+	\renewcommand{\@oddfoot}{%
+		\ESKDfont\fontsize{3.5mm}{3.5mm}\renewcommand{\baselinestretch}{1.15}\selectfont%
+		\raisebox{-10mm}[0mm][0mm]{%
+			\hspace{-24mm}%
+			\includegraphics[width=210mm]{third.pdf}%
+		}%
+		% \hfil%
+	}%
+}%
+
+\newcommand{\ramkaESKDfirst}{
+	\newgeometry{left=25mm, right=10mm, top=10mm, bottom=10mm, includehead, headheight=0mm, headsep=0mm, includefoot, footskip=40mm}
+	\pagestyle{myheadings}
+	\renewcommand{\@oddhead}{}
+	\renewcommand{\@oddfoot}{%
+		\fontsize{3.5mm}{3.5mm}\renewcommand{\baselinestretch}{1.15}\ESKDfont\selectfont%
+		\raisebox{-10mm}[0mm][0mm]{%
+			\hspace{-24mm}%
+			\includegraphics[width=210mm]{first.pdf}%
+			\hspace{-210mm}%
+			\raisebox{6mm}[0mm][0mm]{%
+				\hspace{8.5mm}%
+				\raisebox{-1mm}[0mm][0mm]{%
+					\ESKDrmbox{0mm}{\rotatebox{90}{\ESKDcbox{25mm}{Инв. № подл.}}}%
+					\ESKDrmbox{25mm}{\rotatebox{90}{\ESKDcbox{35mm}{Подп. и дата}}}%
+					\ESKDrmbox{60mm}{\rotatebox{90}{\ESKDcbox{25mm}{Взам. инв. №}}}%
+					\ESKDrmbox{85mm}{\rotatebox{90}{\ESKDcbox{25mm}{Инв. № дубл.}}}%
+					\ESKDrmbox{110mm}{\rotatebox{90}{\ESKDcbox{35mm}{Подп. и дата}}}%
+					\ESKDrmbox{167mm}{\rotatebox{90}{\ESKDcbox{60mm}{Справ. №}}}%
+					\ESKDrmbox{227mm}{\rotatebox{90}{\ESKDcbox{60mm}{Перв. примен.}}}%
+					\hspace{6mm}%
+					\ESKDrmbox{227mm}{\rotatebox{90}{\ESKDcbox{60mm}{\ESKDpervprimen}}}%
+				}%
+				\hspace{4.4mm}%
+				\ESKDrmbox{0mm}{~Утв.}%
+				\ESKDrmbox{5mm}{~Н. контр.}%
+				\ESKDrmbox{10mm}{~}%
+				\ESKDrmbox{15mm}{~Пров.}%
+				\ESKDrmbox{20mm}{~Разраб.}%
+				\ESKDrmbox{25mm}{\ESKDcbox{7mm}{Изм.}}%
+				\hspace{7mm}%
+				\ESKDrmbox{25mm}{\ESKDcbox{10mm}{Лист}}%
+				\hspace{10mm}%
+				\ESKDrmbox{0mm}{~\ESKDutverdil}%
+				\ESKDrmbox{5mm}{~\ESKDnormokontroler}%
+				\ESKDrmbox{10mm}{~}%
+				\ESKDrmbox{15mm}{~\ESKDproveril}%
+				\ESKDrmbox{20mm}{~\ESKDrazrabotal}%
+				\ESKDrmbox{25mm}{\ESKDcbox{23mm}{№ докум.}}%
+				\hspace{23mm}%
+				\ESKDrmbox{25mm}{\ESKDcbox{15mm}{Подп.}}%
+				\hspace{15mm}%
+				\ESKDrmbox{25mm}{\ESKDcbox{10mm}{Дата}}%
+				\hspace{10mm}%
+				\ESKDrmbox{29mm}{\ESKDcbox{120mm}{\fontsize{7mm}{7mm}\selectfont\ESKDoboznachenie}}%
+				\ESKDrmbox{13mm}{\parbox[c][25mm]{70mm}{\center\ESKDnaimenovanie}}%
+				\ESKDrmbox{-4mm}{\hspace{10mm}Копировал}%
+				\hspace{70mm}%
+				\ESKDrmbox{20mm}{\ESKDcbox{15mm}{Лит.}}%
+				\ESKDrmbox{15mm}{\ESKDcbox{5mm}{\ESKDlitera}}%
+				\ESKDrmbox{8mm}{\parbox[c][15mm]{50mm}{\center\ESKDcompaniya}}%
+				\ESKDrmbox{-4mm}{\hspace{10mm}Формат А4}%
+				\hspace{5mm}%
+				\ESKDrmbox{15mm}{\ESKDcbox{5mm}{\ESKDliteraa}}%
+				\hspace{5mm}%
+				\ESKDrmbox{15mm}{\ESKDcbox{5mm}{\ESKDliteraaa}}%
+				\hspace{5mm}%
+				\ESKDrmbox{20mm}{\ESKDcbox{15mm}{Лист}}%
+				\ESKDrmbox{15mm}{\ESKDcbox{15mm}{\thepage}}%
+				\hspace{15mm}%
+				\ESKDrmbox{20mm}{\ESKDcbox{20mm}{Листов}}%
+				\ESKDrmbox{15mm}{\ESKDcbox{20mm}{\pageref{LastPage}}}%
+			}%
+		}%
+		% \hfil%
+	}
+}
+
+\newcommand{\ramkaESKDsecond}{
+	\newgeometry{left=25mm, right=10mm, top=10mm, bottom=10mm, includehead, headheight=0mm, headsep=0mm, includefoot, footskip=15mm}
+	\pagestyle{myheadings}
+	\renewcommand{\@oddhead}{}
+	\renewcommand{\@oddfoot}{%
+		\ESKDfont\fontsize{3.5mm}{3.5mm}\renewcommand{\baselinestretch}{1.15}\selectfont%
+		\raisebox{-10mm}[0mm][0mm]{%
+			\hspace{-24mm}%
+			\includegraphics[width=210mm]{second.pdf}%
+			\hspace{-210mm}%
+			\raisebox{6mm}[0mm][0mm]{%
+				\hspace{8.5mm}%
+				\raisebox{-1mm}[0mm][0mm]{%
+					\ESKDrmbox{0mm}{\rotatebox{90}{\ESKDcbox{25mm}{Инв. № подл.}}}%
+					\ESKDrmbox{25mm}{\rotatebox{90}{\ESKDcbox{35mm}{Подп. и дата}}}%
+					\ESKDrmbox{60mm}{\rotatebox{90}{\ESKDcbox{25mm}{Взам. инв. №}}}%
+					\ESKDrmbox{85mm}{\rotatebox{90}{\ESKDcbox{25mm}{Инв. № дубл.}}}%
+					\ESKDrmbox{110mm}{\rotatebox{90}{\ESKDcbox{35mm}{Подп. и дата}}}%
+					\hspace{6mm}%
+				}%
+				\hspace{4.4mm}%
+				\ESKDrmbox{0mm}{\ESKDcbox{7mm}{Изм.}}%
+				% \ESKDrmbox{280mm}{\rotatebox{180}{\parbox[c][14mm]{70mm}{\fontsize{5mm}{5mm}\selectfont\hfil\ESKDoboznachenie\hfil}}}%
+				\hspace{7mm}%
+				\ESKDrmbox{0mm}{\ESKDcbox{10mm}{Лист}}%
+				\hspace{10mm}%
+				\ESKDrmbox{0mm}{\ESKDcbox{23mm}{№ докум.}}%
+				\hspace{23mm}%
+				\ESKDrmbox{0mm}{\ESKDcbox{15mm}{Подп.}}%
+				\hspace{15mm}%
+				\ESKDrmbox{0mm}{\ESKDcbox{10mm}{Дата}}%
+				\hspace{10mm}%
+				\ESKDrmbox{4mm}{\ESKDcbox{110mm}{\fontsize{7mm}{7mm}\selectfont\ESKDoboznachenie}}%
+				\ESKDrmbox{-4mm}{\hspace{10mm}Копировал}%
+				\ESKDrmbox{-4mm}{\hspace{80mm}Формат А4}%
+				\hspace{110mm}%
+				\ESKDrmbox{8mm}{\ESKDcbox{10mm}{Лист}}%
+				\ESKDrmbox{1mm}{\ESKDcbox{10mm}{\fontsize{5mm}{5mm}\selectfont\thepage}}%
+			}%
+		}%
+		\hfil%
+	}
+}
+
+
+\newcommand{\eskdRestPagesSincePage}{3}%
+
+\newcommand{\ramkaESKDauto}{
+	\newgeometry{left=25mm, right=10mm, top=10mm, bottom=10mm, includehead, headheight=0mm, headsep=0mm, includefoot, footskip=40mm}%  % includefoot
+	\pagestyle{myheadings}
+	\renewcommand{\@oddhead}{}%
+	\renewcommand{\@oddfoot}{%
+		\ifnum\thepage<\eskdRestPagesSincePage{%
+				\fontsize{3.5mm}{3.5mm}\renewcommand{\baselinestretch}{1.15}\ESKDfont\selectfont%
+				\raisebox{-10mm}[0mm][0mm]{%
+					\hspace{-24mm}%
+					\includegraphics[width=210mm]{first.pdf}%
+					\hspace{-210mm}%
+					\raisebox{6mm}[0mm][0mm]{%
+						\hspace{8.5mm}%
+						\raisebox{-1mm}[0mm][0mm]{%
+							\ESKDrmbox{0mm}{\rotatebox{90}{\ESKDcbox{25mm}{Инв. № подл.}}}%
+							\ESKDrmbox{25mm}{\rotatebox{90}{\ESKDcbox{35mm}{Подп. и дата}}}%
+							\ESKDrmbox{60mm}{\rotatebox{90}{\ESKDcbox{25mm}{Взам. инв. №}}}%
+							\ESKDrmbox{85mm}{\rotatebox{90}{\ESKDcbox{25mm}{Инв. № дубл.}}}%
+							\ESKDrmbox{110mm}{\rotatebox{90}{\ESKDcbox{35mm}{Подп. и дата}}}%
+							\ESKDrmbox{167mm}{\rotatebox{90}{\ESKDcbox{60mm}{Справ. №}}}%
+							\ESKDrmbox{227mm}{\rotatebox{90}{\ESKDcbox{60mm}{Перв. примен.}}}%
+							\hspace{6mm}%
+							\ESKDrmbox{227mm}{\rotatebox{90}{\ESKDcbox{60mm}{\ESKDpervprimen}}}%
+						}%
+						\hspace{4.4mm}%
+						\ESKDrmbox{0mm}{~Утв.}%
+						\ESKDrmbox{5mm}{~Н. контр.}%
+						\ESKDrmbox{10mm}{~}%
+						\ESKDrmbox{15mm}{~Пров.}%
+						\ESKDrmbox{20mm}{~Разраб.}%
+						\ESKDrmbox{25mm}{\ESKDcbox{7mm}{Изм.}}%
+						\hspace{7mm}%
+						\ESKDrmbox{25mm}{\ESKDcbox{10mm}{Лист}}%
+						\hspace{10mm}%
+						\ESKDrmbox{0mm}{~\ESKDutverdil}%
+						\ESKDrmbox{5mm}{~\ESKDnormokontroler}%
+						\ESKDrmbox{10mm}{~}%
+						\ESKDrmbox{15mm}{~\ESKDproveril}%
+						\ESKDrmbox{20mm}{~\ESKDrazrabotal}%
+						\ESKDrmbox{25mm}{\ESKDcbox{23mm}{№ докум.}}%
+						\hspace{23mm}%
+						\ESKDrmbox{25mm}{\ESKDcbox{15mm}{Подп.}}%
+						\hspace{15mm}%
+						\ESKDrmbox{25mm}{\ESKDcbox{10mm}{Дата}}%
+						\hspace{10mm}%
+						\ESKDrmbox{29mm}{\ESKDcbox{120mm}{\fontsize{7mm}{7mm}\selectfont\ESKDoboznachenie}}%
+						\ESKDrmbox{13mm}{\parbox[c][25mm]{70mm}{\center\ESKDnaimenovanie}}%
+						\ESKDrmbox{-4mm}{\hspace{10mm}Копировал}%
+						\hspace{70mm}%
+						\ESKDrmbox{20mm}{\ESKDcbox{15mm}{Лит.}}%
+						\ESKDrmbox{15mm}{\ESKDcbox{5mm}{\ESKDlitera}}%
+						\ESKDrmbox{8mm}{\parbox[c][15mm]{50mm}{\center\ESKDcompaniya}}%
+						\ESKDrmbox{-4mm}{\hspace{10mm}Формат А4}%
+						\hspace{5mm}%
+						\ESKDrmbox{15mm}{\ESKDcbox{5mm}{\ESKDliteraa}}%
+						\hspace{5mm}%
+						\ESKDrmbox{15mm}{\ESKDcbox{5mm}{\ESKDliteraaa}}%
+						\hspace{5mm}%
+						\ESKDrmbox{20mm}{\ESKDcbox{15mm}{Лист}}%
+						\ESKDrmbox{15mm}{\ESKDcbox{15mm}{\thepage}}%
+						\hspace{15mm}%
+						\ESKDrmbox{20mm}{\ESKDcbox{20mm}{Листов}}%
+						\ESKDrmbox{15mm}{\ESKDcbox{20mm}{\pageref{LastPage}}}%
+					}%
+				}%
+				% \def\eskdRestPagesSincePage{1}%
+				\setlength\footskip{15mm}\global\footskip=\footskip%
+				\setlength\textheight{262mm}\global\textheight=\textheight% 297 - top10 - bottom10 - footskip15
+			}\else{%
+				% \newgeometry{left=25mm, right=10mm, top=10mm, bottom=10mm, includehead, headheight=0mm, headsep=0mm, includefoot, footskip=15mm}%
+				% \setlength{\footskip}{15mm}%
+				\ESKDfont\fontsize{3.5mm}{3.5mm}\renewcommand{\baselinestretch}{1.15}\selectfont%
+				\raisebox{-10mm}[0mm][0mm]{%
+					\hspace{-24mm}%
+					\includegraphics[width=210mm]{second.pdf}%
+					\hspace{-210mm}%
+					\raisebox{6mm}[0mm][0mm]{%
+						\hspace{8.5mm}%
+						\raisebox{-1mm}[0mm][0mm]{%
+							\ESKDrmbox{0mm}{\rotatebox{90}{\ESKDcbox{25mm}{Инв. № подл.}}}%
+							\ESKDrmbox{25mm}{\rotatebox{90}{\ESKDcbox{35mm}{Подп. и дата}}}%
+							\ESKDrmbox{60mm}{\rotatebox{90}{\ESKDcbox{25mm}{Взам. инв. №}}}%
+							\ESKDrmbox{85mm}{\rotatebox{90}{\ESKDcbox{25mm}{Инв. № дубл.}}}%
+							\ESKDrmbox{110mm}{\rotatebox{90}{\ESKDcbox{35mm}{Подп. и дата}}}%
+							\hspace{6mm}%
+						}%
+						\hspace{4.4mm}%
+						\ESKDrmbox{0mm}{\ESKDcbox{7mm}{Изм.}}%
+						% \ESKDrmbox{280mm}{\rotatebox{180}{\parbox[c][14mm]{70mm}{\fontsize{5mm}{5mm}\selectfont\hfil\ESKDoboznachenie\hfil}}}%
+						\hspace{7mm}%
+						\ESKDrmbox{0mm}{\ESKDcbox{10mm}{Лист}}%
+						\hspace{10mm}%
+						\ESKDrmbox{0mm}{\ESKDcbox{23mm}{№ докум.}}%
+						\hspace{23mm}%
+						\ESKDrmbox{0mm}{\ESKDcbox{15mm}{Подп.}}%
+						\hspace{15mm}%
+						\ESKDrmbox{0mm}{\ESKDcbox{10mm}{Дата}}%
+						\hspace{10mm}%
+						\ESKDrmbox{4mm}{\ESKDcbox{110mm}{\fontsize{7mm}{7mm}\selectfont\ESKDoboznachenie}}%
+						\ESKDrmbox{-4mm}{\hspace{10mm}Копировал}%
+						\ESKDrmbox{-4mm}{\hspace{80mm}Формат А4}%
+						\hspace{110mm}%
+						\ESKDrmbox{8mm}{\ESKDcbox{10mm}{Лист}}%
+						\ESKDrmbox{1mm}{\ESKDcbox{10mm}{\fontsize{5mm}{5mm}\selectfont\thepage}}%
+					}%
+				}%
+			}\fi%
+	}%
+}
+

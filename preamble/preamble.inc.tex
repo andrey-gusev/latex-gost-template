@@ -1,0 +1,74 @@
+\EqInChapter % формулы будут нумероваться в пределах раздела
+\TableInChapter % таблицы будут нумероваться в пределах раздела
+\PicInChapter % рисунки будут нумероваться в пределах раздела
+
+% Добавляем гипертекстовое оглавление в PDF
+\usepackage[
+  bookmarks=true, colorlinks=true, unicode=true,
+  urlcolor=black,linkcolor=black, anchorcolor=black,
+  citecolor=black, menucolor=black, filecolor=black,
+]{hyperref}
+
+\usepackage{graphicx}
+\geometry{top=20mm}
+\geometry{right=20mm}
+\geometry{left=30mm}
+\geometry{bottom=20mm}
+\geometry{ignorefoot}
+
+\graphicspath{{img/}}
+
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{arrows,positioning,shadows}
+
+\usepackage{enumerate}
+\usepackage{multirow}
+\usepackage{paralist,array}
+% \usepackage{soulutf8}
+\usepackage{pdfpages}
+\usepackage{tabularx}
+
+\usepackage{eqexpl}
+\eqexplSetIntro{где}
+\eqexplSetSpace{3mm}
+
+\usepackage[normalem]{ulem}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{booktabs}
+\usepackage{rotating}
+\usepackage{makecell}
+\usepackage{adjustbox}
+\usepackage{xltabular}
+\usepackage{lscape}
+
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{C}[1]{>{\Centering\arraybackslash}p{#1}}
+
+% \usepackage{newfloat}
+% \DeclareFloatingEnvironment[
+% placement={!ht},
+% name=Equation
+% ]{eqndescNoIndent}
+% \edef\fixEqndesc{\noexpand\setlength{\noexpand\parindent}{\the\parindent}\noexpand\setlength{\noexpand\parskip}{\the\parskip}}
+% \newenvironment{eqndesc}[1][!ht]{%
+%     \begin{eqndescNoIndent}[#1]%
+% \fixEqndesc%
+% }
+% {\end{eqndescNoIndent}}
+
+% \setlength{\parskip}{1ex} % разрыв между абзацами
+\usepackage{blindtext}
+\usepackage{tabularray}
+\usepackage{cleveref}
+\usepackage{lipsum}
+\usepackage{pgfplots}
+\pgfplotsset{width=.8\textwidth,compat=newest}
+\usepackage{url}
+\urlstyle{rm}
+
+% \usepackage{siunitx}
+% \sisetup{locale = RU, per-mode = symbol, range-phrase=--, range-units=single, product-units=single}
+
+% \renewcommand{\arraystretch}{1.5}
